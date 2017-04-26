@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Session 1</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="fonts/iconmoon.css" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+		<style>
+.dropbtn {
+    background-color: #f16a54;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+	left: 109px;
+	top: 0px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f16a54;
+}
+#aPlayer > audio { width: 100% }
+        /* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+       /* HIDE DOWNLOAD AUDIO BUTTON */
+     #aPlayer {
+           overflow: hidden;width: 390px; 
+        }
+
+    #aPlayer > audio { width: 420px; }
+}
+
+/* Chrome 22-28 */
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+#aPlayer {
+    	overflow: hidden;width: 390px; 
+        }
+#aPlayer > audio { width: 420px; }
+}
+.linkdetails {
+ }
+
+.detailscontainer {
+	display:block;
+    z-index:2;
+    right:0px;
+			}	
+			
+			
+			
+			
+</style>
+
+		<script>
+function myFunction() {
+			$('.linkdetails').hide();
+
+$('.link').click(function() {
+	console.log("hey ya");
+    $('.linkdetails').hide();
+    $('.linkdetails[data-link=' + $(this).data('link') + ']').fadeIn({
+        width: '200px'
+    }, 300);
+});
+
+$('#defaultContent').trigger( "click" );
+}
+			 
+		</script>
+	</head>
+
+
+	<body onLoad="myFunction()">
+		
+		<div id="site-content">
+			<header class="site-header">
+				<div class="container">
+					<a href="index.html" id="branding" class="pull-left">
+						<i class="icon-cupcake logo"></i>
+						<h1 class="site-title">Wings</h1>
+					</a>
+					<!-- Default snippet for navigation -->
+					<div class="main-navigation pull-right">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="about.html">Session 1</a></li>
+							<li class="menu-item"><a href="offer.html">My offer</a></li>
+							<li class="menu-item"><a href="recipe.html">Recipes</a></li>
+							<li class="menu-item"><a href="contact.html">Contact</a></li>
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+
+					<div class="mobile-navigation"></div>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				
+				<div class="author-bio">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-2">
+								<div class="dropdown">
+								  <button class="dropbtn">SESSION 1</button>
+								  <div class="dropdown-content">
+									<a href="#" id="defaultContent" class="link" data-link="first">Moral Story</a>
+									<a href="#" class="link" data-link="second">Obie Rhyme 1</a>
+								  </div>
+								</div>
+								<div class="dropdown">
+								  <button class="dropbtn">SESSION 2</button>
+								  <div class="dropdown-content">
+									<a href="#" class="link" data-link="rhyme2">Obie Rhyme 02</a>
+									<a href="#" class="link" data-link="breed" >Popular Dog Breeds</a>
+								  </div>
+								</div>
+								<div class="dropdown">
+								  <button class="dropbtn">SESSION 3</button>
+								  <div class="dropdown-content">
+									<a href="#" class="link" data-link="why">Why Obie Rhyme</a>
+									<a href="#" class="link" data-link="sound">Dog Sounds</a>
+									<a href="#" class="link" data-link="behaviour">Dog behaviour</a>
+								  </div>
+								</div>
+								<div class="dropdown">
+								  <button class="dropbtn">SESSION 4</button>
+								  <div class="dropdown-content">
+									<a href="#" class="link" data-link="care">Dog Care</a>
+									<a href="#" class="link" data-link="origami">Origami :- Dog face</a>
+								  </div>
+								</div>
+							</div>
+							<div class="detailscontainer col-md-8 col-md-offset-1 ">
+								<div class="linkdetails" data-link="first" >
+									<h2>Obie, <br> The Obedient Dog</h2>
+									<h4><span><span><strong>About Obie</strong></span><strong>:</strong></span></h4>
+									<h5>Obie is a one-and-a-half year old pet dog who lives on the farm owned by Riya&rsquo;s granny. He loves to play with Riya and other animals on the farm and the gardens around the house.</h5>
+									<h4><span><span><strong>Moral Story</strong></span><strong>:</strong></span></h4>
+									<h5>It was a warm and pleasant evening at around 4pm. Granny was in the kitchen preparing some snacks for the evening. Riya and Obie who were playing in another room caught a wonderful smell coming from the kitchen. So they went into the kitchen to check. When they entered the kitchen, they saw granny take out some freshly baked chocolate chip cookies from the oven and placing them on the dining table to cool them.<img class="size-medium wp-image-276 alignright" src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/1-jumps-plays-300x300.png" alt="1-jumps-plays" width="300" height="300" /></h5>
+									<h5>Riya and Obie immediately reached for the cookies as they looked very delicious. But, Granny stopped them. She said to them that the cookies are still very hot and told them to wait till she got back from the garden. She then went into the garden to collect some vegetables and herbs for preparing the dinner.</h5>
+									<h5>Riya and Obie sat close to the tray of cookies with their eyes fixed on the delicious looking cookies and waited for granny to return from the garden. As time went by, 5mins became 10mins and 10 became 15. Riya was starting to get tired of waiting. Riya decided to disobey granny and went to grab and eat the cookies.</h5>
+									<h5>Just as she reached for the cookies, Obie caught hold of her skirt and tried to pull her back away from the cookies. But, Riya pushed Obie away and grabbed the cookies and put them into her mouth. The moment she bit into the cookies, her tongue got burnt and she started to scream in pain. She did not realize that the cookies were still hot on the inside.</h5>
+									<h5>Granny heard Riya scream and rushed into the kitchen. She soon realized what Riya had done. She poured some cold milk into a glass and gave it to Riya to help cool her burnt tongue.</h5>
+									<h5>After a while when the cookies had cooled down, Granny gave some cookies to Riya and Obie.&nbsp; Obie enjoyed his chocolate chip cookies which tasted really good, but Riya could not enjoy the yummy and delicious chocolate chip cookies that day, as she could not feel the taste because of her burnt tongue. She now realized that if she had only obeyed her granny and waited a little longer she could have enjoyed the yummy cookies along with Obie who was obedient to Granny.</h5>
+									<h4><span><strong>Story Narration &ndash; Audio.</strong></span></h4>
+									<div id="aPlayer">
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Obie-Story-Narration.mp3?_=1" type="audio/mpeg">
+									</audio>
+									</div>
+								</div>
+								<div class="linkdetails" data-link="second" >
+									<img src = "images/Obie.png">
+									<div id="aPlayer">
+									<h4><span><strong>Obie Rhyme &ndash; 01</strong></span></h4>	
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Obie-Rhyme-01.mp3?_=1" type="audio/mpeg">
+									</audio>
+									<h4><span><strong>Obie Rhyme 01 &ndash; Tune: </strong></span></h4>
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/07/Obie-Rhyme-01-Tune.mp3?_=2" type="audio/mpeg">
+									</audio>
+									</div>
+								</div>	
+								<div class="linkdetails" data-link="rhyme2" >
+									<img src = "images/Obie2.jpg" alt="rhyme2"/>
+									<div id="aPlayer">
+									<h4><span><strong>Obie Rhyme &ndash; 02</strong></span></h4>	
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/07/Obie-Rhyme-02.mp3?_=1" type="audio/mpeg">
+									</audio>
+									<h4><span><strong>Obie Rhyme 02 &ndash; Tune: </strong></span></h4>
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/07/Obie-Rhyme-02-Tune.mp3?_=2" type="audio/mpeg">
+									</audio>
+									</div>
+								</div>
+								
+								<div class="linkdetails" data-link="breed" ></div>
+								<div class="linkdetails" data-link="why" >
+									<h4><span><strong>Why Obey - Rhyme </strong></span></h4>
+									<img src = "images/why.jpg" alt="why obie rhyme"/>
+								</div>
+								<div class="linkdetails" data-link="sound" >
+									<h3><span><strong>Dog Sounds</strong></span></h3>
+									<h4>Barking Sound Effect:</h4>
+									<p>Dogs use barking sound to communicate various things. They bark for various reasons which range from alerting the owners about a stranger or another dog to just drawing attention of those around.</p>
+									<div id="aPlayer">
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Dog-barking-sound-effect.mp3?_=1" type="audio/mpeg">
+									</audio>
+									</div>
+									
+									<h4>Growling Sound Effect:</h4>
+									<p>Dogs growl when they want to defend their territory or possession from strangers or from other dogs. It is a warning and an indication of their aggression. Some dogs also growl while they are playing aggressively.</p>
+									<div id="aPlayer">
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Dog-growling-sound-effect.mp3?_=2" type="audio/mpeg">
+									</audio>
+									</div>
+									
+									<h4>Howling Sound Effect:</h4>
+									<p>Dogs howl when they are in pain or sick, and when they are alone and feel separated from their pack members or owners. They howl to announce their presence and to seek attention.</p>
+									<div id="aPlayer">
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Dog-howling-sound-effect.mp3?_=3" type="audio/mpeg">
+									</audio>
+									</div>
+									
+									<h4>Snarling Sound Effect:</h4>
+									<p>Dogs snarl when they are threatened. The snarling sound with curled up lips and the display of teeth is an indication of warning suggesting that the dog is ready to bite.</p>
+									<div id="aPlayer">
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Dog-snarling-sound-effect.mp3?_=4" type="audio/mpeg">
+									</audio>
+									</div>
+									
+									<h4>Whining Sound Effect:</h4>
+									<p>Dogs make the whining sound when they are excited or in response to stressful situations or when they are in pain. Some dogs whine in the presence of their owners in order to get attention, rewards or desired objects.</p>
+									<div id="aPlayer">
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Dog-whining-sound-effect.mp3?_=5" type="audio/mpeg">
+									</audio>
+									</div>
+									
+									<h4>Angry Dog – Barking & Growling Sound Effect:</h4>
+									<p>Dogs often use a combination of these sound effects, such as barking and growling.</p>
+									<div id="aPlayer">
+									<audio controls>
+										<source src="http://www.wings.banyanhub.com/wp-content/uploads/2016/06/Angry-Dog-Barking-Growling-Sound-Effects.mp3?_=6" type="audio/mpeg">
+									</audio>
+									</div>
+									
+								</div>
+								<div class="linkdetails" data-link="behaviour" ></div>
+								<div class="linkdetails" data-link="care" ></div>
+								<div class="linkdetails" data-link="origami" >
+									<object width="884px"  height="600px" id="yf-engine-1493116647288" name="yf-engine-1493116647288" class="yf-engine" data="http://www.wings.banyanhub.com/wp-content/plugins/yendif-player/public/assets/libraries/player.swf?1493116647288" type="application/x-shockwave-flash"><param name="movie" value="http://www.wings.banyanhub.com/wp-content/plugins/yendif-player/public/assets/libraries/player.swf?1493116647288"><param name="name" value="yf-engine-1493116647288"><param name="width" value="100%"><param name="height" value="100%"><param name="allowscriptaccess" value="always"><param name="allowfullscreen" value="true"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="flashvars" value="id=14931166472831&amp;theme=black&amp;baseref=http://www.wings.banyanhub.com/wp-content/plugins/yendif-player/public/assets/libraries/&amp;origin=http://www.wings.banyanhub.com/&amp;mp4=http://www.wings.banyanhub.com/wp-content/uploads/2017/02/Origami-Dog-Face-01.mp4&amp;autoplay=0&amp;loop=0&amp;autoplaylist=0&amp;volume=0.5&amp;playbtn=1&amp;controlbar=1&amp;playpause=1&amp;currenttime=1&amp;progressbar=1&amp;duration=1&amp;volumebtn=1&amp;fullscreen=1&amp;embed=1&amp;share=0&amp;download=0&amp;keyboard=1&amp;browser=chrome&amp;vid=4&amp;site_url=http://www.wings.banyanhub.com&amp;page_title=Origami – Dog Face&amp;"></object>
+								</div>
+							</div>
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+			
+			<footer class="site-footer">
+				<div class="container">
+					<i class="icon-cupcake logo"></i>
+					<nav class="footer-navigation">
+						<a href="about.html">About me</a>
+						<a href="offer.html">My offer</a>
+						<a href="recipe.html">Recipes</a>
+						<a href="contact.html">Contact</a>
+					</nav>
+					
+					<div class="social-links">
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+						<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+					</div>
+					<div class="colophon">
+						<p>Copyright 2014 Company name. Designed by Themezy. All right reserved</p>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+		
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
